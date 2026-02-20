@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @RequestMapping("/api/student")
 public class StudentController {
-    private StudentHandler studentHandler;
+    private final StudentHandler studentHandler;
 
     @PostMapping
     public StudentModel create(@RequestBody StudentModel model) {

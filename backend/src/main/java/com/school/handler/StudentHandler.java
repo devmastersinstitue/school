@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 @Component
 @AllArgsConstructor
 public class StudentHandler {
-    private StudentTransformer studentTransformer;
-    private StudentService studentService;
+    private final StudentTransformer studentTransformer;
+    private final StudentService studentService;
 
     public StudentModel create(StudentModel model) {
         StudentDomain studentDomain = studentTransformer.toEntity(model);
