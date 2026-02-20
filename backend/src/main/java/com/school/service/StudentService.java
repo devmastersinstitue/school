@@ -2,9 +2,11 @@ package com.school.service;
 
 import com.school.domain.StudentDomain;
 import com.school.repository.StudentRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class StudentService {
     private StudentRepository studentRepository;
 

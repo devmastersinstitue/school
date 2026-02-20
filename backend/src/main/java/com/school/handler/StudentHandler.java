@@ -4,11 +4,12 @@ import com.school.domain.StudentDomain;
 import com.school.model.StudentModel;
 import com.school.service.StudentService;
 import com.school.transformer.StudentTransformer;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class StudentHandler {
     private StudentTransformer studentTransformer;
     private StudentService studentService;
