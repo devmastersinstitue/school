@@ -1,0 +1,27 @@
+info:
+  name: Create Subject
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/api/subject
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Fundamental Of Buisness Managment",
+        "code": "4I9HYS",
+        "credits": "4.0 Hours",
+        "department": "Buisness Managment"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

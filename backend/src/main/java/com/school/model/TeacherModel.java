@@ -9,15 +9,14 @@ import java.util.UUID;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class StudentModel {
+@NoArgsConstructor
+public class TeacherModel {
     private UUID id;
     private String firstName;
     private String lastName;
-    private String fatherName;
-    private String contactNumber;
-    private String grade;
-    private String address;
+    private String phoneNumber;
+    private String email;
+    private String department;
+    private String designation;
 }
-

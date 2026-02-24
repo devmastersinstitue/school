@@ -8,19 +8,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.UUID;
 
-@Document(collection = "student")
+@Document(collection = "teacher")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentDomain {
+public class TeacherDomain {
     private UUID id;
     private String firstName;
     private String lastName;
-    private String fatherName;
-    private String contactNumber;
-    private String grade;
-    private String address;
+    private String phoneNumber;
+    private String email;
+    private String department;
+    private String designation;
+
 }
-
-

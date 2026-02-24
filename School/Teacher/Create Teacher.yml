@@ -1,0 +1,29 @@
+info:
+  name: Create Teacher
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/api/teacher
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "firstName" : "Zain",
+        "lastName" : "Mohsin",
+        "email" : "Zainmohsin@gmail.com",
+        "phoneNumber" : "0377-09403678",
+        "designation" : "Assistant Professor",
+        "department" : "Computer Science"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

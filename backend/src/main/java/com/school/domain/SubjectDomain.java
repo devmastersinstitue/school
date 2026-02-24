@@ -5,22 +5,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
-@Document(collection = "student")
+@Document (collection = "subject")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentDomain {
+public class SubjectDomain {
     private UUID id;
-    private String firstName;
-    private String lastName;
-    private String fatherName;
-    private String contactNumber;
-    private String grade;
-    private String address;
+    private String name;
+    private String code;
+    private String credits;
+    private String department;
+
 }
-
-

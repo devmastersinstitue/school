@@ -16,7 +16,7 @@ public class StudentTransformer extends Transformer<StudentDomain, StudentModel>
                 .id(model.getId() == null ? UUID.randomUUID() : model.getId())
                 .firstName(model.getFirstName())
                 .lastName(model.getLastName())
-                .firstName(model.getFirstName())
+                .fatherName(model.getFatherName())
                 .grade(model.getGrade())
                 .contactNumber(model.getContactNumber())
                 .address(model.getAddress())

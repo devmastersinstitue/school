@@ -1,14 +1,14 @@
 package com.school.controller;
 
+import com.school.domain.StudentDomain;
 import com.school.handler.StudentHandler;
 import com.school.model.StudentModel;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
@@ -19,6 +19,13 @@ public class StudentController {
 
     @PostMapping
     public StudentModel create(@RequestBody StudentModel model) {
+
         return studentHandler.create(model);
     }
+
+    @GetMapping
+    public List<StudentModel> getAllStudent() {
+        return studentHandler.getAll();
+    }
+
 }

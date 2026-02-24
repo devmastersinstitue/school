@@ -11,13 +11,10 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentModel {
+public class SubjectModel {
     private UUID id;
-    private String firstName;
-    private String lastName;
-    private String fatherName;
-    private String contactNumber;
-    private String grade;
-    private String address;
+    private String name;
+    private String code;
+    private String credits;
+    private String department;
 }
-
