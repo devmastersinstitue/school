@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
     private final UserHandler userHandler;
 
-    @PostMapping
+    @PostMapping("/crete")
     public UserModel create(@RequestBody UserModel userModel){
         return userHandler.create(userModel);
     }

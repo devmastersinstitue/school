@@ -1,0 +1,126 @@
+.authShell {
+  flex: 1;
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authCard {
+  width: 100%;
+  max-width: 520px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+@media (prefers-color-scheme: light) {
+  .authCard {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.02);
+  }
+}
+
+.authHeader {
+  margin-bottom: 16px;
+}
+
+.authTitle {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.authSubtitle {
+  margin: 8px 0 0;
+  opacity: 0.85;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.authGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 520px) {
+  .authGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.authField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.authField > span {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.authField input,
+.authField select {
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.18);
+  color: inherit;
+  padding: 0 12px;
+  outline: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .authField input,
+  .authField select {
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    background: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.authField input:focus,
+.authField select:focus {
+  border-color: #646cff;
+}
+
+.authHint {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.authButton {
+  width: 100%;
+}
+
+.authAlert {
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.authAlertError {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.authAlertSuccess {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@media (prefers-color-scheme: light) {
+  .authAlertError,
+  .authAlertSuccess {
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    background: rgba(0, 0, 0, 0.03);
+  }
+}
