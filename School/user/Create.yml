@@ -1,0 +1,33 @@
+info:
+  name: Create
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/api/login/create
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: ""
+      value: ""
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "userName" : "abc123",
+        "firstName" : "abc",
+        "lastName" : "def",
+        "password": "abc123",
+        "email" : "abc@abc.com",
+        "userRole" : "TEACHER"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

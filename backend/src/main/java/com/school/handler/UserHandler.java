@@ -16,4 +16,8 @@ public class UserHandler {
     public UserModel create(UserModel userModel) {
         return userTransformer.toModel(userService.create(userTransformer.toEntity(userModel)));
     }
+
+    public UserModel login(String email, String password) {
+        return userTransformer.toModel(userService.login(email, password));
+    }
 }

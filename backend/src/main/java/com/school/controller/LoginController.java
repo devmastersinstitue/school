@@ -1,12 +1,11 @@
 package com.school.controller;
 
+import com.school.domain.User;
 import com.school.handler.UserHandler;
 import com.school.model.UserModel;
+import com.school.service.UserService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
@@ -14,8 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
     private final UserHandler userHandler;
 
-    @PostMapping("/crete")
+    @PostMapping("/create")
     public UserModel create(@RequestBody UserModel userModel){
+
         return userHandler.create(userModel);
     }
+
+    @PostMapping("/authenticate")
+    public UserModel login(@RequestParam String email,
+                           @RequestParam String password) {
+
+        return userHandler.login(email, password);
+    }
+
 }
