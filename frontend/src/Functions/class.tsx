@@ -1,7 +1,7 @@
 import './../index.css'
 function Class(props: any) {
   return (
-    <div>
+    <div className="w-[340px] rounded-2xl border border-orange-200 bg-white/95 p-5 text-gray-900 shadow-xl">
 
       <div className="text-center mb-3">
         <h2 className="text-2xl font-bold text-red-600">
@@ -9,7 +9,7 @@ function Class(props: any) {
         </h2>
       </div>
 
-      <hr className="mb-3 border-orange-300" />
+      <hr className="mb-3 border-0 border-t border-orange-300" />
 
       <div className="space-y-3 text-gray-800">
 
@@ -25,7 +25,7 @@ function Class(props: any) {
 
       </div>
 
-      <hr className="my-4 border-orange-300" />
+  <hr className="my-4 border-0 border-t border-orange-300" />
 
    
       <div className="text-center">
